@@ -7,11 +7,11 @@ export default function Login() {
         email: '',
         password: ''
     })
-    const { email, password } = formData
+    const {email, password} = formData
     const navigate = useNavigate()
 
     return (
-
+        <div className="flex flex-col min-h-screen
         <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-neutral-900 dark:text-gray-100">
             <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
             <p className="text-sm text-center dark:text-gray-300">Dont have account?&nbsp;&nbsp;&nbsp;
@@ -49,9 +49,10 @@ export default function Login() {
 
             <div>
                 <header>
-
+                    
                 </header>
             </div>
+        </div>
         </div>
     )
 }

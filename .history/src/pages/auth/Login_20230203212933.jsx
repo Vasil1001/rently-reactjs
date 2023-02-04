@@ -7,11 +7,11 @@ export default function Login() {
         email: '',
         password: ''
     })
-    const { email, password } = formData
+    const {email, password} = formData
     const navigate = useNavigate()
 
     return (
-
+        
         <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-neutral-900 dark:text-gray-100">
             <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
             <p className="text-sm text-center dark:text-gray-300">Dont have account?&nbsp;&nbsp;&nbsp;
@@ -35,6 +35,7 @@ export default function Login() {
                     <div className="space-y-2">
                         <label htmlFor="email" className="block text-sm">Email address</label>
                         <input type="email" name="email" id="email" placeholder="username@gmail.com" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-neutral-700 dark:text-gray-100 focus:dark:border-violet-400 hover:bg-neutral-600" />
+                    
                     </div>
                     <div className="space-y-2">
                         <div className="flex justify-between">
@@ -49,7 +50,7 @@ export default function Login() {
 
             <div>
                 <header>
-
+                    
                 </header>
             </div>
         </div>
