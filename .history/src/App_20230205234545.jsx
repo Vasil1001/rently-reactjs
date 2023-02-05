@@ -11,7 +11,7 @@ import Navbar from './components/Navbar'
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen items-center text-white justify-between dark:bg-gray-900">
+      <div className="flex flex-col min-h-screen items-center text-white justify-between bg-slate-700">
         <Navbar />
         <Routes>
           <Route path='/' element={<Explore />} />
