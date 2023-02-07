@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import visibilityIcon from '../../assets/svg/visibilityIcon.svg'
-
+import { ReactComponent as ArrowRightIcon } from '../../assets/svg/keyboardArrowRightIcon.svg'
+import { ReactComponent as VisibilityIcon } from '../../assets/svg/visibilityIcon.svg'
 export default function Login() {
     const [showPassword, setShowPassword] = useState(false)
     const [formData, setFormData] = useState({
@@ -51,6 +51,7 @@ export default function Login() {
                             className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-neutral-700 dark:text-gray-100 focus:dark:border-violet-400 hover:bg-neutral-600" />
                             
                     </div>
+                    <VisibilityIcon
                     <img src='visibilityIcon' alt='show password' 
                             onClick={() => setShowPassword((prevState) => !prevState)} />
                 </div>

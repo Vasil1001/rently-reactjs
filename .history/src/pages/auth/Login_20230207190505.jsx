@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import visibilityIcon from '../../assets/svg/visibilityIcon.svg'
+import { ReactComponent as ArrowRightIcon } from '../../assets/svg/keyboardArrowRightIcon.svg'
 
 export default function Login() {
     const [showPassword, setShowPassword] = useState(false)

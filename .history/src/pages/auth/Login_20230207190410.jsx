@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { ReactComponent as ArrowRightIcon } from '../../assets/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../../assets/svg/visibilityIcon.svg'
 
 export default function Login() {
@@ -31,7 +32,7 @@ export default function Login() {
                 <hr className="w-full dark:text-gray-400" />
                 <p className="px-3 dark:text-gray-400">OR</p>
                 <hr className="w-full dark:text-gray-400" />
-                
+                <ArrowRightIcon/>
             </div>
             <form className="space-y-8 ng-untouched ng-pristine ng-valid">
                 <div className="space-y-4">
