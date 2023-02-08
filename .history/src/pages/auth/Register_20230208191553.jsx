@@ -6,8 +6,7 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { db } from "../../firebase.config";
-import { setDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../firebase.config";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -26,35 +25,8 @@ export default function Register() {
   };
 
   const onSubmit = async (e) => {
-    e.preventDefault()
-
-    try {
-      const auth = getAuth()
-
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      )
-
-      const user = userCredential.user
-
-      updateProfile(auth.currentUser, {
-        displayName: name,
-      })
-
-      const formDataCopy = { ...formData }
-      delete formDataCopy.password
-      formDataCopy.timestamp = serverTimestamp()
-      navigate('/')
-      await setDoc(doc(db, 'users', user.uid), formDataCopy)
-
-      
-    } catch (error) {
-      console.log("asd")
-    }
-  }
-
+    e.preventDefault();
+  };
   return (
     <div className="w-full max-w-md p-4 rounded-3xl border-2 border-slate-600 shadow-xl  sm:p-8 dark:bg-base-300 dark:text-gray-100">
       <h2 className="mb-3 text-3xl font-semibold text-center">Sign up</h2>
@@ -147,6 +119,7 @@ export default function Register() {
           </div>
         </div>
         <button
+          type="button"
           className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#ec48fb] dark:text-gray-900 hover:bg-[#ee7bf8]"
         >
           Sign up
@@ -157,5 +130,5 @@ export default function Register() {
         <header></header>
       </div>
     </div>
-  );
+  )
 }

@@ -46,10 +46,10 @@ export default function Register() {
       const formDataCopy = { ...formData }
       delete formDataCopy.password
       formDataCopy.timestamp = serverTimestamp()
-      navigate('/')
+
       await setDoc(doc(db, 'users', user.uid), formDataCopy)
 
-      
+      navigate('/')
     } catch (error) {
       console.log("asd")
     }

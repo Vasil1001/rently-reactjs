@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import visibilityIcon from "../../assets/svg/visibilityIcon.svg";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  updateProfile,
-} from "firebase/auth";
-import { db } from "../../firebase.config";
-import { setDoc, serverTimestamp } from "firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { db } from '../../firebase.config'
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -26,32 +21,21 @@ export default function Register() {
   };
 
   const onSubmit = async (e) => {
-    e.preventDefault()
-
     try {
-      const auth = getAuth()
-
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      )
-
-      const user = userCredential.user
-
-      updateProfile(auth.currentUser, {
-        displayName: name,
-      })
-
-      const formDataCopy = { ...formData }
-      delete formDataCopy.password
-      formDataCopy.timestamp = serverTimestamp()
-      navigate('/')
-      await setDoc(doc(db, 'users', user.uid), formDataCopy)
-
       
+      const auth = getAuth();
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      await updateProfile(auth.currentUser, {
+        displayName: name
+      })
+      await db.collection('users').doc(userCredential.user.uid).set({
+        name: name,
+        email: email,
+        uid: userCredential.user.uid
+      })
+      navigate('/dashboard');
     } catch (error) {
-      console.log("asd")
+      console.log(error);
     }
   }
 
@@ -88,10 +72,7 @@ export default function Register() {
         <hr className="w-full dark:text-gray-400" />
       </div>
 
-      <form
-        onSubmit={onSubmit}
-        className="space-y-8 ng-untouched ng-pristine ng-valid"
-      >
+      <form onSubmit={onSubmit} className="space-y-8 ng-untouched ng-pristine ng-valid">
         <div className="space-y-4">
           <div className="space-y-2">
             <label htmlFor="name" className="block text-sm">
@@ -147,6 +128,7 @@ export default function Register() {
           </div>
         </div>
         <button
+          type="button"
           className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#ec48fb] dark:text-gray-900 hover:bg-[#ee7bf8]"
         >
           Sign up

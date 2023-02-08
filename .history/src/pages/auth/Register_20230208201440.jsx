@@ -46,10 +46,10 @@ export default function Register() {
       const formDataCopy = { ...formData }
       delete formDataCopy.password
       formDataCopy.timestamp = serverTimestamp()
-      navigate('/')
+
       await setDoc(doc(db, 'users', user.uid), formDataCopy)
 
-      
+      navigate('/')
     } catch (error) {
       console.log("asd")
     }
@@ -147,6 +147,7 @@ export default function Register() {
           </div>
         </div>
         <button
+          type="submit"
           className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#ec48fb] dark:text-gray-900 hover:bg-[#ee7bf8]"
         >
           Sign up

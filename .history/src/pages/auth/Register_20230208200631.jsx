@@ -26,34 +26,32 @@ export default function Register() {
   };
 
   const onSubmit = async (e) => {
-    e.preventDefault()
-
+    e.preventDefault();
+    console.log("PRESSED");
     try {
-      const auth = getAuth()
-
+      const auth = getAuth();
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
-      )
+      );
 
-      const user = userCredential.user
+      const user = userCredential.user;
 
-      updateProfile(auth.currentUser, {
+      await updateProfile(auth.currentUser, {
         displayName: name,
-      })
+      });
 
-      const formDataCopy = { ...formData }
+      const formDataCopy = { ...formData };
       delete formDataCopy.password
-      formDataCopy.timestamp = serverTimestamp()
-      navigate('/')
-      await setDoc(doc(db, 'users', user.uid), formDataCopy)
-
+      formDataCopy.serverTimestamp = serverTimestamp()
       
+      await setDoc(doc(db, "users", user.uid), formDataCopy);
+      navigate("/");
     } catch (error) {
-      console.log("asd")
+      console.log(error);
     }
-  }
+  };
 
   return (
     <div className="w-full max-w-md p-4 rounded-3xl border-2 border-slate-600 shadow-xl  sm:p-8 dark:bg-base-300 dark:text-gray-100">
@@ -147,6 +145,7 @@ export default function Register() {
           </div>
         </div>
         <button
+          type="submit"
           className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#ec48fb] dark:text-gray-900 hover:bg-[#ee7bf8]"
         >
           Sign up

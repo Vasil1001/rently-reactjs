@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import visibilityIcon from "../../assets/svg/visibilityIcon.svg";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  updateProfile,
-} from "firebase/auth";
-import { db } from "../../firebase.config";
-import { setDoc, serverTimestamp } from "firebase/firestore";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -24,36 +17,6 @@ export default function Register() {
       [e.target.id]: e.target.value,
     }));
   };
-
-  const onSubmit = async (e) => {
-    e.preventDefault()
-
-    try {
-      const auth = getAuth()
-
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      )
-
-      const user = userCredential.user
-
-      updateProfile(auth.currentUser, {
-        displayName: name,
-      })
-
-      const formDataCopy = { ...formData }
-      delete formDataCopy.password
-      formDataCopy.timestamp = serverTimestamp()
-      navigate('/')
-      await setDoc(doc(db, 'users', user.uid), formDataCopy)
-
-      
-    } catch (error) {
-      console.log("asd")
-    }
-  }
 
   return (
     <div className="w-full max-w-md p-4 rounded-3xl border-2 border-slate-600 shadow-xl  sm:p-8 dark:bg-base-300 dark:text-gray-100">
@@ -88,20 +51,16 @@ export default function Register() {
         <hr className="w-full dark:text-gray-400" />
       </div>
 
-      <form
-        onSubmit={onSubmit}
-        className="space-y-8 ng-untouched ng-pristine ng-valid"
-      >
-        <div className="space-y-4">
+      <form className="space-y-8 ng-untouched ng-pristine ng-valid">
           <div className="space-y-2">
-            <label htmlFor="name" className="block text-sm">
-              Name
+            <label htmlFor="email" className="block text-sm">
+              Email address
             </label>
             <input
-              type="text"
-              id="name"
-              placeholder="Name"
-              value={name}
+              type="email"
+              id="email"
+              placeholder="Email"
+              value={email}
               onChange={onChange}
               className="w-full px-3 py-2 border rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 bg-gray-700 hover:bg-gray-600"
             />
@@ -147,6 +106,7 @@ export default function Register() {
           </div>
         </div>
         <button
+          type="button"
           className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#ec48fb] dark:text-gray-900 hover:bg-[#ee7bf8]"
         >
           Sign up
