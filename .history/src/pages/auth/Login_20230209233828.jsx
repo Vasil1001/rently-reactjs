@@ -19,22 +19,16 @@ export default function Login() {
   };
 
   const onSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const auth = getAuth();
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+    e.preventDefault()
+try
+    const auth = getAuth()
 
-      if (userCredential.user) {
-        navigate("/");
-      }
-    } catch (error) {}
-    console.log(error);
-  };
+    const userCredential = await signInWithEmailAndPassword(auth, email, password)
 
+    if(userCredential.user) {
+      navigate('/')
+    }
+  }
   return (
     <div className="w-full max-w-md p-4 rounded-3xl border-2 border-slate-600 shadow-xl  sm:p-8 dark:bg-base-300 dark:text-gray-100">
       <h2 className="mb-3 text-3xl font-semibold text-center">

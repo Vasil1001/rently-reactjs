@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import visibilityIcon from "../../assets/svg/visibilityIcon.svg";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -16,23 +15,6 @@ export default function Login() {
       ...formData,
       [e.target.id]: e.target.value,
     }));
-  };
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const auth = getAuth();
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-
-      if (userCredential.user) {
-        navigate("/");
-      }
-    } catch (error) {}
-    console.log(error);
   };
 
   return (
@@ -68,10 +50,7 @@ export default function Login() {
         <p className="px-3 dark:text-gray-400">OR</p>
         <hr className="w-full dark:text-gray-400" />
       </div>
-      <form
-        onSubmit={onSubmit}
-        className="space-y-8 ng-untouched ng-pristine ng-valid"
-      >
+      <form className="space-y-8 ng-untouched ng-pristine ng-valid">
         <div className="space-y-4">
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm">

@@ -18,23 +18,6 @@ export default function Login() {
     }));
   };
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const auth = getAuth();
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-
-      if (userCredential.user) {
-        navigate("/");
-      }
-    } catch (error) {}
-    console.log(error);
-  };
-
   return (
     <div className="w-full max-w-md p-4 rounded-3xl border-2 border-slate-600 shadow-xl  sm:p-8 dark:bg-base-300 dark:text-gray-100">
       <h2 className="mb-3 text-3xl font-semibold text-center">
@@ -68,10 +51,7 @@ export default function Login() {
         <p className="px-3 dark:text-gray-400">OR</p>
         <hr className="w-full dark:text-gray-400" />
       </div>
-      <form
-        onSubmit={onSubmit}
-        className="space-y-8 ng-untouched ng-pristine ng-valid"
-      >
+      <form className="space-y-8 ng-untouched ng-pristine ng-valid">
         <div className="space-y-4">
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm">
