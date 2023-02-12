@@ -9,19 +9,16 @@ export default function Profile() {
     email: auth.currentUser.email,
   });
 
-  const {name, email} = formData
-  
   const navigate = useNavigate()
 
-  const onLogout = () => {
+  const onLogout = () => {{
     auth.signOut()
-    navigate('/')
   }
   
-  return (
-  <div className="profile">
+  return <div className="profile">
+    <header>
       <p>My profile</p>
       <button type="button" onClick={onLogout}>Logout</button>
+    </header>
   </div>
-  )
 }

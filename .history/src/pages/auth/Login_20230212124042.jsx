@@ -33,9 +33,7 @@ export default function Login() {
       if (userCredential.user) {
         navigate("/profile");
       }
-    } catch (error) {
-      toast.error("Invalid user login credentials")
-    }
+    } catch (error) {toast.error("Invalid user login credentials")}
     
   };
 

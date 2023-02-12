@@ -9,8 +9,6 @@ export default function Profile() {
     email: auth.currentUser.email,
   });
 
-  const {name, email} = formData
-  
   const navigate = useNavigate()
 
   const onLogout = () => {

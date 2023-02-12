@@ -10,7 +10,6 @@ export default function Profile() {
   });
 
   const {name, email} = formData
-  
   const navigate = useNavigate()
 
   const onLogout = () => {
