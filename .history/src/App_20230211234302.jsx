@@ -8,7 +8,7 @@ import Offers from "./pages/Offers";
 import Register from "./pages/auth/Register";
 import Navbar from "./components/Navbar";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <>
@@ -29,18 +29,7 @@ function App() {
         </div>
       </Router>
 
-      <ToastContainer
-        position="top-center"
-        autoClose={4500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+      <ToastContainer />
     </>
   );
 }

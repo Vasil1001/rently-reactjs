@@ -52,7 +52,7 @@ export default function Register() {
 
       
     } catch (error) {
-      toast.error("Something went wrong with registration")
+      toast.error("Invalid user login credentials")
     }
   }
 

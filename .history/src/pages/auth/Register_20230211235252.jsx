@@ -148,7 +148,7 @@ export default function Register() {
           </div>
         </div>
         <button
-          className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#ec48fb] dark:text-gray-900 hover:bg-[#ee7bf8]"
+          className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#e91e63] dark:text-gray-900 hover:bg-[#ee7bf8]"
         >
           Sign up
         </button>
