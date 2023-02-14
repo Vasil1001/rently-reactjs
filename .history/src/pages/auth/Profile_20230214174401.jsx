@@ -26,7 +26,7 @@ export default function Profile() {
   };
   return (
     <div className="container rounded-lg bg-[#2d323b] p-6 mx-auto lg:w-10/12 mt-5">
-      <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-5 md:gap-5">
+      <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 auto-cols-max mb-5 md:gap-5">
         <div className=" rounded-lg mb-6 card md:mb-0 shadow-sm">
           <figure>
             <img className="rounded-lg"

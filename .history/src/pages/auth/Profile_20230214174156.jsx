@@ -26,17 +26,17 @@ export default function Profile() {
   };
   return (
     <div className="container rounded-lg bg-[#2d323b] p-6 mx-auto lg:w-10/12 mt-5">
-      <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-5 md:gap-5">
-        <div className=" rounded-lg mb-6 card md:mb-0 shadow-sm">
+      <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 auto-cols-max mb-5 md:gap-5">
+        <div className="mb-6 card md:mb-0 shadow-sm">
           <figure>
-            <img className="rounded-lg"
+            <img
               src="https://www.w3schools.com/howto/img_avatar.png"
               alt="Image"
             />
           </figure>
         </div>
 
-        <div className="flex flex-col col-span-2 xl:col-start-2 xl:col-span-12  justify-between">
+        <div className="flex flex-col col-span-3 xl:col-start-2 xl:col-span-12  justify-between">
           <div className="w-full grow rounded-lg shadow-md bg-neutral stats text-slate-100">
             <div className="stat">
               <div className="text-lg stat-value">

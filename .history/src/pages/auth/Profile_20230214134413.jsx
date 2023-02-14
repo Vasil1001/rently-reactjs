@@ -25,48 +25,37 @@ export default function Profile() {
     console.log(123);
   };
   return (
-    <div className="container rounded-lg bg-[#2d323b] p-6 mx-auto lg:w-10/12 mt-5">
-      <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-5 md:gap-5">
-        <div className=" rounded-lg mb-6 card md:mb-0 shadow-sm">
+    <div className="container rounded-lg bg-[#2d323b] p-6 mx-auto lg:w-10/12">
+      <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 place-self-stretch mb-8 md:gap-8">
+        <div className="xl:w-72 md:w-72 mb-6  md:mb-0 shadow-sm">
           <figure>
-            <img className="rounded-lg"
+            <img
               src="https://www.w3schools.com/howto/img_avatar.png"
               alt="Image"
             />
           </figure>
         </div>
 
-        <div className="flex flex-col col-span-2 xl:col-start-2 xl:col-span-12  justify-between">
-          <div className="w-full grow rounded-lg shadow-md bg-neutral stats text-slate-100">
-            <div className="stat">
-              <div className="text-lg stat-value">
-                <div className="flex justify-between">
-                  <h1 className="text-2xl ">
-                    Name
-                    <div className="ml-2 mr-1 badge badge-success">badge</div>
-                  </h1>
-                  <button className="btn btn-outline btn-sm" onClick={onLogout}>
-                    Logout
-                  </button>
-                </div>
-              </div>
-              <hr className="my-3" />
-              <p>
-                Description, this user has been selling properties for 5 years
-                and has sold 10 properties in the last 12 months.
-              </p>
-              <p
-                onClick={() => {
-                  changeDetails && onSubmit();
-                  setChangeDetails((prevState) => !prevState);
-                }}
-              >
-                {changeDetails ? "done" : "change"}
-              </p>
-            </div>
+        <div className="flex flex-col col-span-2 xl:col-start-2 xl:col-span-10 mb-0 justify-between">
+          <div className="flex justify-between">
+            <h1 className="text-3xl card-title">
+              Name
+              <div className="ml-2 mr-1 badge badge-success">badge</div>
+            </h1>
+            <button className="btn btn-outline" onClick={onLogout}>
+              Logout
+            </button>
           </div>
-
-          <div className="w-full mt-1 rounded-lg shadow-md bg-neutral stats  text-slate-100">
+          description
+          <p
+            onClick={() => {
+              changeDetails && onSubmit();
+              setChangeDetails((prevState) => !prevState);
+            }}
+          >
+            {changeDetails ? "done" : "change"}
+          </p>
+          <div className="w-full rounded-lg shadow-md bg-neutral stats  text-slate-100">
             <div className="stat ">
               <div className="stat-title text-md">Location</div>
               <div className="text-lg stat-value">Stoke Newington</div>
