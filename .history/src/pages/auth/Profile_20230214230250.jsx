@@ -29,8 +29,7 @@ export default function Profile() {
       <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-5 md:gap-5">
         <div className=" rounded-lg mb-6 card md:mb-0 shadow-sm">
           <figure>
-            <img
-              className="rounded-lg"
+            <img className="rounded-lg"
               src="https://www.w3schools.com/howto/img_avatar.png"
               alt="Image"
             />
@@ -42,7 +41,10 @@ export default function Profile() {
             <div className="stat">
               <div className="text-lg stat-value">
                 <div className="flex justify-between">
-                  <h1 className="text-2xl ">My Profile</h1>
+                  <h1 className="text-2xl ">
+                    My Profile
+                    <div className="ml-2 mr-1 badge badge-success">badge</div>
+                  </h1>
                   <button className="btn btn-outline btn-sm" onClick={onLogout}>
                     Logout
                   </button>
@@ -55,8 +57,8 @@ export default function Profile() {
               </p>
               <p
                 onClick={() => {
-                  changeDetails && onSubmit();
-                  setChangeDetails((prevState) => !prevState);
+                  changeDetails && onSubmit()
+                  setChangeDetails((prevState) => !prevState)
                 }}
               >
                 {changeDetails ? "done" : "change"}
@@ -79,37 +81,6 @@ export default function Profile() {
       </div>
 
       <div className="w-full rounded-lg shadow-md bg-neutral stats text-slate-100 mb-5">
-        <div className="stat ">
-          <div className="flex flex-col">
-            <div className="flex justify-between">
-              <div className="text-lg stat-value">Personal Details</div>
-              <div className="text-lg stat-value">
-                <p
-                  className="active:text-red-400"
-                  onClick={() => {
-                    changeDetails && onSubmit();
-                    setChangeDetails((prevState) => !prevState);
-                  }}
-                >
-                  {changeDetails ? "done" : "change"}
-                </p>
-              </div>
-            </div>
-            <hr className="my-3" />
-            <form>
-              <input type="text" id="name" className="" />
-            </form>
-          </div>
-        </div>
-      </div>
-
-      {/* SECOND FULL ROW AFTER PICTURE */}
-      <div className="w-full rounded-lg shadow-md bg-neutral stats text-slate-100 mb-5">
-        <div className="stat ">
-          <div className="stat-title text-md">Location</div>
-          <div className="text-lg stat-value">Stoke Newington</div>
-        </div>
-
         <div className="stat ">
           <div className="stat-title text-md">Location</div>
           <div className="text-lg stat-value">Stoke Newington</div>

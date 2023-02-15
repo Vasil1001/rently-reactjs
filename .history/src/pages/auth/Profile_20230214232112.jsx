@@ -94,11 +94,8 @@ export default function Profile() {
                   {changeDetails ? "done" : "change"}
                 </p>
               </div>
+              asd
             </div>
-            <hr className="my-3" />
-            <form>
-              <input type="text" id="name" className="" />
-            </form>
           </div>
         </div>
       </div>

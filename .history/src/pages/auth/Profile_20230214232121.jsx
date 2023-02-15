@@ -95,10 +95,7 @@ export default function Profile() {
                 </p>
               </div>
             </div>
-            <hr className="my-3" />
-            <form>
-              <input type="text" id="name" className="" />
-            </form>
+            
           </div>
         </div>
       </div>

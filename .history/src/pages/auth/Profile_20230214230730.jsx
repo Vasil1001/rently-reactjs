@@ -72,20 +72,8 @@ export default function Profile() {
 
             <div className="stat ">
               <div className="stat-title text-md">Type</div>
-              <div className="text-lg stat-value">Semi Detatched</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full rounded-lg shadow-md bg-neutral stats text-slate-100 mb-5">
-        <div className="stat ">
-          <div className="flex flex-col">
-            <div className="flex justify-between">
-              <div className="text-lg stat-value">Personal Details</div>
               <div className="text-lg stat-value">
                 <p
-                  className="active:text-red-400"
                   onClick={() => {
                     changeDetails && onSubmit();
                     setChangeDetails((prevState) => !prevState);
@@ -95,15 +83,22 @@ export default function Profile() {
                 </p>
               </div>
             </div>
-            <hr className="my-3" />
-            <form>
-              <input type="text" id="name" className="" />
-            </form>
           </div>
         </div>
       </div>
 
-      {/* SECOND FULL ROW AFTER PICTURE */}
+      <div className="w-full rounded-lg shadow-md bg-neutral stats text-slate-100 mb-5">
+        <div className="stat ">
+          <div className="stat-title text-md">Location</div>
+          <div className="text-lg stat-value">Stoke Newington</div>
+
+          <div className="flex justify-between">
+            <div className="stat-title text-md">Personal Details</div>
+            <div className="text-lg stat-value">Stoke Newington</div>
+          </div>
+        </div>
+      </div>
+
       <div className="w-full rounded-lg shadow-md bg-neutral stats text-slate-100 mb-5">
         <div className="stat ">
           <div className="stat-title text-md">Location</div>
