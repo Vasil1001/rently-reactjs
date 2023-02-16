@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import visibilityIcon from "../../assets/svg/visibilityIcon.svg";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from 'react-toastify'
-import OAuth from "../../components/OAuth";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -52,7 +51,7 @@ export default function Login() {
         </Link>
       </p>
       
-      <OAuth />
+      <OAuth/>
 
       <div className="flex items-center w-full my-4">
         <hr className="w-full dark:text-gray-400" />

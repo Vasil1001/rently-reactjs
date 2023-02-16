@@ -5,10 +5,14 @@ import { getAuth, sendPasswordResetEmail } from "firebase/auth"
 import { toast } from "react-toastify"
 
 export default function ForgotPassword() {
-  const [email, setEmail] = useState("")
+  const [formData, setFormData] = useState({
+    email: "",
+  })
+  const [email, password] = useState("")
+
   const navigate = useNavigate()
 
-  const onChange = (e) => setEmail(e.target.value)
+  const onChange = (e) => {}
 
   const onSubmit = async (e) => {
     e.preventDefault()
@@ -37,7 +41,7 @@ export default function ForgotPassword() {
       </div>
 
       <form
-        className="space-y-5 ng-untouched ng-pristine ng-valid"
+        className="space-y-8 ng-untouched ng-pristine ng-valid"
         onSubmit={onSubmit}
       >
         <div className="space-y-4">

@@ -5,10 +5,14 @@ import { getAuth, sendPasswordResetEmail } from "firebase/auth"
 import { toast } from "react-toastify"
 
 export default function ForgotPassword() {
-  const [email, setEmail] = useState("")
+  const [formData, setFormData] = useState({
+    email: "",
+  })
+  const [email, password] = useState("")
+
   const navigate = useNavigate()
 
-  const onChange = (e) => setEmail(e.target.value)
+  const onChange = (e) => {}
 
   const onSubmit = async (e) => {
     e.preventDefault()
@@ -37,7 +41,7 @@ export default function ForgotPassword() {
       </div>
 
       <form
-        className="space-y-5 ng-untouched ng-pristine ng-valid"
+        className="space-y-8 ng-untouched ng-pristine ng-valid"
         onSubmit={onSubmit}
       >
         <div className="space-y-4">
@@ -51,6 +55,17 @@ export default function ForgotPassword() {
               placeholder="Email"
               onChange={onChange}
               className="w-full px-3 py-2 border rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 bg-gray-700 hover:bg-gray-600"
+            />
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="flex items-center h-5">
+            <input
+              id="newsletter"
+              aria-describedby="newsletter"
+              type="checkbox"
+              class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+              required=""
             />
           </div>
         </div>

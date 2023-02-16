@@ -6,6 +6,7 @@ import { toast } from "react-toastify"
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("")
+  
   const navigate = useNavigate()
 
   const onChange = (e) => setEmail(e.target.value)
