@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import visibilityIcon from "../../assets/svg/visibilityIcon.svg"
 import { getAuth, sendPasswordResetEmail } from "firebase/auth"
 import { toast } from "react-toastify"
+import { Toast } from "react-toastify/dist/components"
 
 export default function ForgotPassword() {
   const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ export default function ForgotPassword() {
       toast.success("Password reset link sent to your email")
       navigate("/login")
     } catch (error) {
-      toast.error("Something went wrong with password reset")
+      Toast.error("Something went wrong with password reset")
     }
   }
 
@@ -84,7 +85,7 @@ export default function ForgotPassword() {
           </div>
         </div>
         <button
-          type="submit"
+          type="button"
           className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#00b3ff] dark:text-gray-900 hover:bg-[#6fc2e6]"
         >
           Send Reset Link

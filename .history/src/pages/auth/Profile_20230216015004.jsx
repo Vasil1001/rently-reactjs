@@ -89,7 +89,7 @@ export default function Profile() {
             </div>
           </div>
 
-          <div className="w-full mt-5 rounded-lg shadow-md bg-neutral stats text-slate-100">
+          <div className="w-full mt-5 rounded-lg shadow-md bg-neutral stats  text-slate-100">
             <div className="stat ">
               <div className="stat-title text-md">Location</div>
               <div className="text-lg stat-value">Stoke Newington</div>
@@ -122,30 +122,30 @@ export default function Profile() {
             </div>
             <hr className="my-3" />
 
-            <div className="grid grid-cols-2 sm:gap-1 md:gap-5 lg:gap-5 ">
-              <form className="flex flex-col sm:col-span-2 md:col-span-1 lg:col-span-1 col-span-2 ">
-                <div className="stat-title text-md ml-1">Name</div>
+            <div className="grid grid-cols-2 sm:gap-1 md:gap-4 lg:gap-4 ">
+              <form className="flex flex-col sm:col-span-2 md:col-span-1 lg:col-span-1 col-span-2 justify-between">
+              <div className="stat-title text-md">Name</div>
                 <input
                   type="text"
                   id="name"
                   className={
                     !changeDetails
-                      ? "bg-slate-700 mb-3 p-2 rounded-lg mt-1 "
-                      : "bg-slate-600 mb-3 p-2 rounded-lg mt-1 ring-1 ring-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                      ? "bg-slate-700 mb-5 p-2 rounded-lg mt-1 "
+                      : "bg-slate-600 mb-5 p-2 rounded-lg mt-1 ring-1 ring-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600"
                   }
                   disabled={!changeDetails}
                   value={name}
                   onChange={onChange}
                 />
 
-                <div className="stat-title text-md ml-1">Email</div>
+              <div className="stat-title text-md">Email</div>
                 <input
                   type="text"
                   id="email"
                   className={
                     !changeDetails
-                      ? "bg-slate-700 mb-3 p-2 rounded-lg mt-1"
-                      : "bg-slate-600 mb-3 p-2 rounded-lg mt-1 ring-1 ring-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                      ? "bg-slate-700 mb-3 p-2 rounded-lg mt-2"
+                      : "bg-slate-600 mb-3 p-2 rounded-lg mt-2 ring-1 ring-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600"
                   }
                   disabled={!changeDetails}
                   value={email}
@@ -154,29 +154,26 @@ export default function Profile() {
               </form>
               <div className="flex flex-col sm:col-span-2 md:col-span-1 lg:col-span-1 col-span-2">
                 <form className="flex flex-col ">
-                  <div className="stat-title text-md ml-1">Name</div>
-
                   <input
                     type="text"
                     id="name"
                     className={
                       !changeDetails
-                        ? "bg-slate-700 mb-3 p-2 rounded-lg mt-1 "
-                        : "bg-slate-600 mb-3 p-2 rounded-lg mt-1 ring-1 ring-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                        ? "bg-slate-700 mb-2 p-2 rounded-lg mt-1 "
+                        : "bg-slate-600 mb-2 p-2 rounded-lg mt-1 ring-1 ring-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600"
                     }
                     disabled={!changeDetails}
                     value={name}
                     onChange={onChange}
                   />
-              <div className="stat-title text-md ml-1">Email</div>
 
                   <input
                     type="text"
                     id="email"
                     className={
                       !changeDetails
-                        ? "bg-slate-700 mb-3 p-2 rounded-lg mt-1"
-                        : "bg-slate-600 mb-3 p-2 rounded-lg mt-1 ring-1 ring-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                        ? "bg-slate-700 mb-2 p-2 rounded-lg mt-2"
+                        : "bg-slate-600 mb-2 p-2 rounded-lg mt-2 ring-1 ring-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600"
                     }
                     disabled={!changeDetails}
                     value={email}

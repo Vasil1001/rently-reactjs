@@ -23,7 +23,7 @@ export default function ForgotPassword() {
       toast.success("Password reset link sent to your email")
       navigate("/login")
     } catch (error) {
-      toast.error("Something went wrong with password reset")
+      Toast.error("Something went wrong with password reset")
     }
   }
 
@@ -84,7 +84,7 @@ export default function ForgotPassword() {
           </div>
         </div>
         <button
-          type="submit"
+          type="button"
           className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#00b3ff] dark:text-gray-900 hover:bg-[#6fc2e6]"
         >
           Send Reset Link

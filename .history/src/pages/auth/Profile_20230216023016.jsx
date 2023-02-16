@@ -122,7 +122,7 @@ export default function Profile() {
             </div>
             <hr className="my-3" />
 
-            <div className="grid grid-cols-2 sm:gap-1 md:gap-5 lg:gap-5 ">
+            <div className="grid grid-cols-2 sm:gap-1 md:gap-4 lg:gap-5 ">
               <form className="flex flex-col sm:col-span-2 md:col-span-1 lg:col-span-1 col-span-2 ">
                 <div className="stat-title text-md ml-1">Name</div>
                 <input

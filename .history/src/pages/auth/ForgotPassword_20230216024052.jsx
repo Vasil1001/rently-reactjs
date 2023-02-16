@@ -8,24 +8,17 @@ export default function ForgotPassword() {
   const [formData, setFormData] = useState({
     email: "",
   })
-  const [email, password] = useState("")
-
+  const { email, password } = formData
   const navigate = useNavigate()
 
-  const onChange = (e) => {}
-
-  const onSubmit = async (e) => {
-    e.preventDefault()
-
-    try {
-      const auth = getAuth()
-      await sendPasswordResetEmail(auth, email)
-      toast.success("Password reset link sent to your email")
-      navigate("/login")
-    } catch (error) {
-      toast.error("Something went wrong with password reset")
-    }
+  const onChange = (e) => {
+    setFormData(() => ({
+      ...formData,
+      [e.target.id]: e.target.value,
+    }))
   }
+
+  const onSubmit = async (e) => {}
 
   return (
     <div className="w-full mx-auto max-w-md  p-4 rounded-3xl border-2 border-slate-600 shadow-xl  sm:p-8 dark:bg-base-300 dark:text-gray-100">
@@ -40,10 +33,7 @@ export default function ForgotPassword() {
         </Link>
       </div>
 
-      <form
-        className="space-y-8 ng-untouched ng-pristine ng-valid"
-        onSubmit={onSubmit}
-      >
+      <form className="space-y-8 ng-untouched ng-pristine ng-valid">
         <div className="space-y-4">
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm">
@@ -53,6 +43,7 @@ export default function ForgotPassword() {
               type="email"
               id="email"
               placeholder="Email"
+              value={email}
               onChange={onChange}
               className="w-full px-3 py-2 border rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 bg-gray-700 hover:bg-gray-600"
             />
@@ -84,7 +75,7 @@ export default function ForgotPassword() {
           </div>
         </div>
         <button
-          type="submit"
+          type="button"
           className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#00b3ff] dark:text-gray-900 hover:bg-[#6fc2e6]"
         >
           Send Reset Link

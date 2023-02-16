@@ -51,8 +51,9 @@ export default function ForgotPassword() {
             </label>
             <input
               type="email"
-              id="email"
+              
               placeholder="Email"
+              value={email}
               onChange={onChange}
               className="w-full px-3 py-2 border rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 bg-gray-700 hover:bg-gray-600"
             />
@@ -84,7 +85,7 @@ export default function ForgotPassword() {
           </div>
         </div>
         <button
-          type="submit"
+          type="button"
           className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#00b3ff] dark:text-gray-900 hover:bg-[#6fc2e6]"
         >
           Send Reset Link

@@ -89,7 +89,7 @@ export default function Profile() {
             </div>
           </div>
 
-          <div className="w-full mt-5 rounded-lg shadow-md bg-neutral stats text-slate-100">
+          <div className="w-full mt-5 rounded-lg shadow-md bg-neutral statstext-slate-100">
             <div className="stat ">
               <div className="stat-title text-md">Location</div>
               <div className="text-lg stat-value">Stoke Newington</div>
@@ -122,7 +122,7 @@ export default function Profile() {
             </div>
             <hr className="my-3" />
 
-            <div className="grid grid-cols-2 sm:gap-1 md:gap-5 lg:gap-5 ">
+            <div className="grid grid-cols-2 sm:gap-1 md:gap-4 lg:gap-4 ">
               <form className="flex flex-col sm:col-span-2 md:col-span-1 lg:col-span-1 col-span-2 ">
                 <div className="stat-title text-md ml-1">Name</div>
                 <input

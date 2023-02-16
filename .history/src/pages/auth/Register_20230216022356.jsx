@@ -56,7 +56,7 @@ export default function Register() {
   }
 
   return (
-    <div className="w-full mx-auto mt-5 max-w-md p-4 rounded-3xl border-2 border-slate-600 shadow-xl  sm:p-8 dark:bg-base-300 dark:text-gray-100">
+    <div className="w-fullmx-auto max-w-md p-4 rounded-3xl border-2 border-slate-600 shadow-xl  sm:p-8 dark:bg-base-300 dark:text-gray-100">
       <h2 className="mb-3 text-3xl font-semibold text-center">Sign up</h2>
       <p className="text-sm text-center dark:text-gray-300">
         Already have an account?&nbsp;&nbsp;&nbsp;

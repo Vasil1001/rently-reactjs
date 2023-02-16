@@ -23,7 +23,7 @@ export default function ForgotPassword() {
       toast.success("Password reset link sent to your email")
       navigate("/login")
     } catch (error) {
-      toast.error("Something went wrong with password reset")
+      Toast.error("Something went wrong with password reset")
     }
   }
 
