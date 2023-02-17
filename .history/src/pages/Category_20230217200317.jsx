@@ -35,44 +35,39 @@ export default function Category() {
 
         // ? Execute query
         const querySnap = await getDocs(q)
-
-        const listings = []
+        
+        let listings = []
         querySnap.forEach((doc) => {
-          return listings.push({
-            id: doc.id,
-            data: doc.data(),
-          })
+            return listings.push({
+                
+            })
         })
-        setListings(listings)
-        setLoading(false)
-      } catch (error) {
-        toast.error("Could not fetch listings")
-      }
+
+      } catch (error) {}
     }
     fetchListings()
-  }, [params.categoryName])
-
-  return (
-    <div className=" flex flex-col justify-top pt-5 w-full h-screen">
-      <p className="text-3xl font-bold">
-        {params.categoryName === "rent" ? "Places for rent" : "Places for sale"}
-      </p>
-
-      {loading ? (
-        <Spinner />
-      ) : listings && listings.length > 0 ? (
-        <>
-          <main>
-            <ul>
-              {listings.map((listing) => (
-                <h3 key={listing.id}>{listing.data.name}</h3>
-              ))}
-            </ul>
-          </main>
-        </>
-      ) : (
-        <p>No listings for {params.categoryName}</p>
-      )}
-    </div>
-  )
+  })
+  //     const fetchListings = async () => {
+  //       try {
+  //         const q = query(
+  //           collection(db, "listings"),
+  //           where("category", "==", params.category),
+  //           orderBy("createdAt", "desc"),
+  //           limit(9)
+  //         )
+  //         const querySnapshot = await getDocs(q)
+  //         const listings = []
+  //         querySnapshot.forEach((doc) => {
+  //           listings.push({ id: doc.id, ...doc.data() })
+  //         })
+  //         setListings(listings)
+  //         setLoading(false)
+  //       } catch (error) {
+  //         console.log(error)
+  //         toast.error("Could not fetch listings")
+  //       }
+  //     }
+  //     fetchListings()
+  //   })
+  return <div>Category</div>
 }

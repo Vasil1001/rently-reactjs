@@ -65,7 +65,7 @@ export default function Category() {
           <main>
             <ul>
               {listings.map((listing) => (
-                <h3 key={listing.id}>{listing.data.name}</h3>
+                <h3>{listing.data.name}</h3>
               ))}
             </ul>
           </main>

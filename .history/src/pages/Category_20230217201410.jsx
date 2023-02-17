@@ -50,7 +50,7 @@ export default function Category() {
       }
     }
     fetchListings()
-  }, [params.categoryName])
+  }, [])
 
   return (
     <div className=" flex flex-col justify-top pt-5 w-full h-screen">
@@ -64,9 +64,9 @@ export default function Category() {
         <>
           <main>
             <ul>
-              {listings.map((listing) => (
-                <h3 key={listing.id}>{listing.data.name}</h3>
-              ))}
+              {listings.map((listing) => ()
+                <h3>{listing.data.name}</h3>
+              )}
             </ul>
           </main>
         </>

@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React, {  useState } from "react"
 import { getAuth, updateProfile } from "firebase/auth"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { db } from "../../firebase.config"
 import { doc, updateDoc } from "firebase/firestore"
 import { toast } from "react-toastify"
@@ -52,6 +52,7 @@ export default function Profile() {
   return (
     <div className="container rounded-lg bg-[#2d323b] p-6 mx-auto xl:w-10/12 lg:w-10/12 md:w-12/12 mt-5">
       <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-5 md:gap-5">
+        
         <div className=" rounded-lg mb-6  card md:mb-0 ">
           <figure className="">
             <img
@@ -168,7 +169,7 @@ export default function Profile() {
                     value={name}
                     onChange={onChange}
                   />
-                  <div className="stat-title text-md ml-1">Email</div>
+              <div className="stat-title text-md ml-1">Email</div>
 
                   <input
                     type="text"

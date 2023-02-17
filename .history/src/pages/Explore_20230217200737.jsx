@@ -12,14 +12,8 @@ export default function Explore() {
           <div className="p-6 text-center">
             <div className="max-w-full">
               <h1 className="text-2xl font-bold mb-4">Refine Search</h1>
-              <p className="mb-4 font-bold">
-                Search properties for sale and to rent in the UK
-              </p>
-              <input
-                type="text"
-                placeholder="e.g. London or E11 1EE"
-                className="input bg-slate-50 w-full max-w-md"
-              />
+              <p className="mb-4 font-bold">Search properties for sale and to rent in the UK</p>
+              <input type="text" placeholder="e.g. London or E11 1EE" className="input bg-slate-50 w-full max-w-md" />
             </div>
           </div>
         </div>
