@@ -5,6 +5,8 @@ Project 3 of the 'React Front to Back 2022' Udemy course, with my own twist in l
 
 Link to app: [https://rently-marketplace.netlify.app/](https://rently-marketplace.netlify.app/)
 
+[![React][React.js]][React-url]
+
 Added so far:
 - Tailwind CSS for layouts
 - Firebase Auth: Login, Register, Logout, Google Auth, Profile page
@@ -12,8 +14,6 @@ Added so far:
 - Explore page with categories inside
 - Template categories for rent, sale, user posted listings, saved listings, user alerts, user filters
 - Basic listing component with property name, description - fetched from Firestore found in rent/sale category
-
-[![React][React.js]][React-url]
 
 <!-- app-screenshots -->
 ## App screenshots
