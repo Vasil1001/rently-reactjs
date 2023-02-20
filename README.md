@@ -1,4 +1,4 @@
-# rently-reactjs
+# Rently - react.js
 A React + Vite + Firebase + Tailwind + DaisyUI app. _WORK IN PROGRESS_
 
 Project 3 of the 'React Front to Back 2022' Udemy course, with my own twist in layout design and features. 
