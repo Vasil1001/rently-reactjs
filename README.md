@@ -1,7 +1,10 @@
 # rently-reactjs
-Project 3 of the 'React Front to Back 2022' Udemy course
+A React + Vite + Firebase + Tailwind + DaisyUI app.
+Project 3 of the 'React Front to Back 2022' Udemy course, with my own twist in design and features. 
 
-Work in progress, check it out at: https://rently-marketplace.netlify.app/
+Work in progress.
+
+Link to app: [https://meals-nutrition-tracker.netlify.app/](https://rently-marketplace.netlify.app/)
 
 Added so far:
 - Tailwind CSS for layouts
