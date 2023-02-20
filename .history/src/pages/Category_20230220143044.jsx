@@ -79,6 +79,7 @@ export default function Category() {
                   id={listing.id}
                 />
               ))}
+              ))}
             </ul>
           </main>
         </>

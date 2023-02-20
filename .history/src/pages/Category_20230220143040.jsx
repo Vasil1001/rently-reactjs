@@ -71,6 +71,7 @@ export default function Category() {
                   listing={listing.data}
                   id={listing.id}
                 />
+                
               ))}
               {listings.map((listing) => (
                 <ListingItem
@@ -78,6 +79,10 @@ export default function Category() {
                   listing={listing.data}
                   id={listing.id}
                 />
+                
+              ))}
+
+                
               ))}
             </ul>
           </main>
@@ -85,6 +90,7 @@ export default function Category() {
       ) : (
         <p>No listings for {params.categoryName}</p>
       )}
+      
     </div>
   )
 }
