@@ -6,7 +6,7 @@ import sellCategoryImage from "../assets/jpg/sellCategoryImage.jpg"
 export default function Explore() {
   return (
     <div className="pt-5 mx-auto xl:w-10/12 lg:w-12/12 md:w-12/12 sm:w-12/12  w-full h-screen">
-      <header className="mb-10">
+      <header>
         <h1 className="text-4xl font-bold mb-5">Explore</h1>
         <div className=" bg-base-300 rounded-lg mb-5">
           <div className="p-6 text-center">
@@ -24,8 +24,7 @@ export default function Explore() {
           </div>
         </div>
       </header>
-
-      <h1 className="text-3xl font-bold mb-2 mt-5">Categories</h1>
+      <h1 className="text-3xl font-bold mb-2">Categories</h1>
       <div className="flex row gap-5 ">
         <Link to="/category/rent">
           <img
@@ -66,7 +65,7 @@ export default function Explore() {
       </div>
       </div>
 
-      <h1 className="text-3xl font-bold mb-2 mt-10">User Features</h1>
+      <h1 className="text-3xl font-bold mb-2 mt-15">User Features</h1>
 
       <div className="flex row gap-5">
         <Link to="/category/rent">
