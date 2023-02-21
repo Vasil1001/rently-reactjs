@@ -35,7 +35,7 @@ function App() {
               </Route>
 
               <Route path="/offers" element={<Offers />} />
-              <Route path="/create-listing" element={<CreateListing />} />
+              <Route path="/offers" element={<CreateListing />} />
             </Routes>
           </div>
         </div>

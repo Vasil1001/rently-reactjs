@@ -90,12 +90,12 @@ export default function Profile() {
           </div>
 
           <div className="w-full mt-5 rounded-lg shadow-md bg-neutral stats text-slate-100">
-            <Link to="/listings">
-              <div className="stat ">
-                <div className="stat-title text-md">Listing</div>
-                <div className="text-lg stat-value">Sell or Rent your home</div>
-              </div>
-            </Link>
+            <Link
+            <div className="stat ">
+              <div className="stat-title text-md">Listing</div>
+              <div className="text-lg stat-value">Sell or Rent your home</div>
+            </div>
+
           </div>
         </div>
       </div>

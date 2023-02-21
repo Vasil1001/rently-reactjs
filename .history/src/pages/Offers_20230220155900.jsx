@@ -56,7 +56,7 @@ export default function Offers() {
   return (
     <div className=" flex flex-col mx-auto pt-5 xl:w-10/12 lg:w-12/12 w-full h-screen">
       <p className="text-3xl font-bold mb-5">
-        Offers
+        {params.categoryName === "rent" ? "Places for rent" : "Places for sale"}
       </p>
 
       {loading ? (
@@ -83,8 +83,7 @@ export default function Offers() {
           </main>
         </>
       ) : (
-        <p>There are no current offers</p>
-        
+        <p>No listings for {params.categoryName}</p>
       )}
     </div>
   )

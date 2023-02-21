@@ -83,8 +83,7 @@ export default function Offers() {
           </main>
         </>
       ) : (
-        <p>There are no current offers</p>
-        
+        <p>No listings for {params.categoryName}</p>
       )}
     </div>
   )
