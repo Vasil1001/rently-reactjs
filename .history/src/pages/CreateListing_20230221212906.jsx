@@ -62,14 +62,13 @@ export default function CreateListing() {
 
   return (
     <div>
-      <p className="text-xl my-5">Create a Listing</p>
-      <form onSubmit={onSubmit} className="flex flex-col">
-        <label>Sell / Rent</label>
+    <header>Create a Listing</header>
+      <form onSubmit={onSubmit}>
         <button
           type="submit"
-          className="w-32 px-4 py-3 mt-2 font-semibold rounded-md dark:bg-[#4cee3b] dark:text-gray-900 hover:bg-[#7cfb6d]"
+          className="w-32 px-4 py-3 font-semibold rounded-md dark:bg-[#ec48fb] dark:text-gray-900 hover:bg-[#ee7bf8]"
         >
-          <b>Sell</b>
+          Sell
         </button>
       </form>
     </div>

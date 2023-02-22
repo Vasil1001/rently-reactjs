@@ -38,9 +38,7 @@ export default function CreateListing() {
   const auth = getAuth()
   const navigate = useNavigate()
   const isMounted = useRef(true)
-  const onSubmit = (e) => {
-    e.preventDefault()
-  }
+
   useEffect(() => {
     if (isMounted) {
       onAuthStateChanged(auth, (user) => {
@@ -60,18 +58,8 @@ export default function CreateListing() {
     return <Spinner />
   }
 
-  return (
-    <div>
-      <p className="text-xl my-5">Create a Listing</p>
-      <form onSubmit={onSubmit} className="flex flex-col">
-        <label>Sell / Rent</label>
-        <button
-          type="submit"
-          className="w-32 px-4 py-3 mt-2 font-semibold rounded-md dark:bg-[#4cee3b] dark:text-gray-900 hover:bg-[#7cfb6d]"
-        >
-          <b>Sell</b>
-        </button>
-      </form>
-    </div>
-  )
+  return <div>
+
+    <form action="onSubmit"></form>
+  </div>
 }

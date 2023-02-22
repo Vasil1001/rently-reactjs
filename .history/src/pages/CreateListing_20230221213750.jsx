@@ -67,7 +67,7 @@ export default function CreateListing() {
         <label>Sell / Rent</label>
         <button
           type="submit"
-          className="w-32 px-4 py-3 mt-2 font-semibold rounded-md dark:bg-[#4cee3b] dark:text-gray-900 hover:bg-[#7cfb6d]"
+          className="w-32 px-4 py-3 mt-5 font-semibold rounded-md dark:bg-[#4cee3b] dark:text-gray-900 hover:bg-[#7cfb6d]"
         >
           <b>Sell</b>
         </button>
