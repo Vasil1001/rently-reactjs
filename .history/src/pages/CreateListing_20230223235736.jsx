@@ -196,8 +196,6 @@ export default function CreateListing() {
         onChange={onMutate}
         required
       />
-
-      
     </div>
   )
 }

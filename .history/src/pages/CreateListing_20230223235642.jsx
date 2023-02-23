@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import Spinner from "../components/Spinner"
 
 export default function CreateListing() {
-  const [geoLocationEnabled, setGeoLocationEnabled] = useState(false)
+  const [geoLocationEnabled, setGeoLocationEnabled] = useState(true)
   const [loading, setLoading] = useState(false)
 
   const [formData, setFormData] = useState({
@@ -196,8 +196,6 @@ export default function CreateListing() {
         onChange={onMutate}
         required
       />
-
-      
     </div>
   )
 }

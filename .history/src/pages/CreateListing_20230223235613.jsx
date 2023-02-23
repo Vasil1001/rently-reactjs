@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import Spinner from "../components/Spinner"
 
 export default function CreateListing() {
-  const [geoLocationEnabled, setGeoLocationEnabled] = useState(false)
+  const [geoLocationEnabled, setGeoLocationEnabled] = useState(true)
   const [loading, setLoading] = useState(false)
 
   const [formData, setFormData] = useState({
@@ -109,95 +109,35 @@ export default function CreateListing() {
           required
         />
       </form>
-      // FORM ROOMS SECTION
-      <div className="formRooms flex">
-        <div>
-          <label className="formLabel">Bedrooms</label>
-          <input
-            className="formInputSmall"
-            type="number"
-            id="bedrooms"
-            value={bedrooms}
-            onChange={onMutate}
-            min="1"
-            max="50"
-            required
-          />
-        </div>
-        <div>
-          <label className="formLabel">Bathrooms</label>
-          <input
-            className="formInputSmall"
-            type="number"
-            id="bathrooms"
-            value={bathrooms}
-            onChange={onMutate}
-            min="1"
-            max="50"
-            required
-          />
-        </div>
-      </div>
-      // PARKING
-      <label className="formLabel">Parking spot</label>
-      <div className="formButtons">
-        <button
-          className={parking ? "formButtonActive" : "formButton"}
-          type="button"
-          id="parking"
-          value={true}
-          onClick={onMutate}
-          min="1"
-          max="50"
-        >
-          Yes
-        </button>
-        <button
-          className={
-            !parking && parking !== null ? "formButtonActive" : "formButton"
-          }
-          type="button"
-          id="parking"
-          value={false}
-          onClick={onMutate}
-        >
-          No
-        </button>
-      </div>
-      <label className="formLabel">Furnished</label>
-      <div className="formButtons">
-        <button
-          className={furnished ? "formButtonActive" : "formButton"}
-          type="button"
-          id="furnished"
-          value={true}
-          onClick={onMutate}
-        >
-          Yes
-        </button>
-        <button
-          className={
-            !furnished && furnished !== null ? "formButtonActive" : "formButton"
-          }
-          type="button"
-          id="furnished"
-          value={false}
-          onClick={onMutate}
-        >
-          No
-        </button>
-      </div>
-      <label className="formLabel">Address</label>
-      <textarea
-        className="formInputAddress"
-        type="text"
-        id="address"
-        value={address}
-        onChange={onMutate}
-        required
-      />
-
-      
+          // FORM ROOMS SECTION
+      <div className='formRooms flex'>
+            <div>
+              <label className='formLabel'>Bedrooms</label>
+              <input
+                className='formInputSmall'
+                type='number'
+                id='bedrooms'
+                value={bedrooms}
+                onChange={onMutate}
+                min='1'
+                max='50'
+                required
+              />
+            </div>
+            <div>
+              <label className='formLabel'>Bathrooms</label>
+              <input
+                className='formInputSmall'
+                type='number'
+                id='bathrooms'
+                value={bathrooms}
+                onChange={onMutate}
+                min='1'
+                max='50'
+                required
+              />
+            </div>
+          </div>
     </div>
   )
 }
