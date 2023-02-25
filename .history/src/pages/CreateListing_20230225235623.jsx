@@ -92,9 +92,6 @@ export default function CreateListing() {
       location = address
     }
     // ? Store images in firebase
-    const storeImage = async (image) => {
-      const storageRef = storage.ref()
-    }
     setLoading(false)
   }
 

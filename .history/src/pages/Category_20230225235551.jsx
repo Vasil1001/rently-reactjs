@@ -14,6 +14,7 @@ import { db } from "../firebase.config"
 import { toast } from "react-toastify"
 import Spinner from "../components/Spinner"
 import ListingItem from "../components/ListingItem"
+import {v4 as uuidv4} from 'uuid';
 
 export default function Category() {
   const [listings, setListings] = useState(null)

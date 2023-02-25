@@ -93,7 +93,6 @@ export default function CreateListing() {
     }
     // ? Store images in firebase
     const storeImage = async (image) => {
-      const storageRef = storage.ref()
     }
     setLoading(false)
   }

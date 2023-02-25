@@ -91,10 +91,7 @@ export default function CreateListing() {
       geolocation.lng = longitude
       location = address
     }
-    // ? Store images in firebase
-    const storeImage = async (image) => {
-      const storageRef = storage.ref()
-    }
+    // ? Store images in storage
     setLoading(false)
   }
 

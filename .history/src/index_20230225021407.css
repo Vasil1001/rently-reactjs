@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat', sans-serif;
 font-family: 'Nunito Sans', sans-serif;
 font-family: 'Open Sans', sans-serif;
-font-family: 'Urbanist', sans-serif; */
+font-family: 'Urbanist', sans-serif;
 body {
   background-color: (60, 50, 10);
 
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
