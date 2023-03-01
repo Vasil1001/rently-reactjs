@@ -1,0 +1,38 @@
+import React, { useEffect, useState } from "react"
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom"
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../firebase.config"
+import { toast } from "react-toastify"
+import { IoChevronBackOutline } from "react-icons/io5"
+
+export default function Contact() {
+  const [message, setMessage] = useState("")
+  const [landlord, setLandlord] = useState("")
+  const [searchParams, setSearchParams] = useSearchParams()
+  const navigate = useNavigate()
+  const params = useParams()
+  useEffect(() => {
+    const getLandlord = async () => {
+      const docRef = doc(db, "users", params.landlordId)
+      const docSnap = await getDoc(docRef)
+
+      if (docSnap.exists) {
+        setLandlord(docSnap.data())
+      } else {
+        toast.error("Could not get landlord data")
+      }
+    }
+  }, [params.landlordId])
+  return (
+    <div className="rounded-lg mx-auto xl:w-9/12 lg:w-12/12 md:w-12/12 sm:w-12/12 mt-5">
+      <div className="container mx-auto ">
+          <span className="flex items-center p-2 mb-3 cursor-pointer" onClick={() => navigate(-1)}>
+            <IoChevronBackOutline />
+            &nbsp;&nbsp;{" "}
+            <p className="text-sm tracking-wide">Back to listing</p>
+          </span>
+        <p className="text-2xl font-bold ">Contact Landlord</p>
+      </div>
+    </div>
+  )
+}
