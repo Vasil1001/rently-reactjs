@@ -100,9 +100,9 @@ export default function Listing() {
         })}
       </Swiper>
 
-        <section className="">
+        <section className="h-full">
           <div className="flex flex-wrap ">
-            <div className=" md:block md:w-3/5 pr-2 h-[300px] min-h-[30rem]">
+            <div className=" md:block md:w-3/5  pr-2 h-[300px] min-h-[30rem]">
               <div
                 className="h-[300px] min-h-[30rem] w-full bg-cover rounded shadow-md"
                 style={{
@@ -111,9 +111,9 @@ export default function Listing() {
                 }}
               ></div>
             </div>
-            <div className="flex flex-col h-[300px] min-h-[30rem] overflow-hidden  rounded-md gap-2 md:w-2/5">
+            <div className="h-[300px] min-h-[30rem] md:w-2/5 mb-2">
               <div
-                  className="h-[150px] min-h-[15rem] w-full bg-cover rounded shadow-md "
+                  className="h-[150px] min-h-[15rem] w-full bg-cover rounded shadow-md pb-2"
                   style={{
                     backgroundImage:
                       `url(${listing.imgUrls[0]})`,

@@ -75,30 +75,48 @@ export default function Listing() {
         </span>
 
         {/* // ? SWIPING  RESPONSIVE PHOTO GALLERY 3/3 GRID WITH 2/3 IMAGE ON LEFT */}
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-        navigation={true}
-        a11y={true}
-        style={{ height: '300px', minHeight: "30rem" }}
-        className="mb-5 "
-      >
-        {listing.imgUrls.map((url, index) => {
-          return (
-            <SwiperSlide key={index}>
-            <div
-                style={{
-                  background: `url(${listing.imgUrls[index]}) center no-repeat`,
-                  backgroundSize: 'cover',
-                  minHeight: '30rem',
-                }}
-                className=''
-              ></div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          navigation={true}
+          a11y={true}
+          style={{ height: "300px", minHeight: "30rem" }}
+          className="mb-5 "
+        >
+          {listing.imgUrls.map((url, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <section className="">
+                  <div className="flex flex-wrap ">
+                    <div className=" md:block md:w-3/5 pr-2 h-[300px] min-h-[30rem]">
+                      <div
+                        className="h-[300px] min-h-[30rem] w-full bg-cover rounded shadow-md"
+                        style={{
+                          backgroundImage: `url(${listing.imgUrls[index]})`,
+                        }}
+                      ></div>
+                    </div>
+                    <div className="flex flex-col h-[300px] min-h-[30rem] overflow-hidden  rounded-md gap-2 md:w-2/5">
+                      <div
+                        className="h-[150px] min-h-[15rem] w-full bg-cover rounded shadow-md "
+                        style={{
+                          backgroundImage: `url(${listing.imgUrls[index + 1]})`,
+                        }}
+                      ></div>
+                      <div
+                        className="h-[150px] min-h-[15rem] w-full bg-cover rounded shadow-md"
+                        style={{
+                          backgroundImage: `url(${listing.imgUrls[index + 2]})`,
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                </section>
+              </SwiperSlide>
+            )
+          })}
+        </Swiper>
 
         <section className="">
           <div className="flex flex-wrap ">
@@ -106,30 +124,23 @@ export default function Listing() {
               <div
                 className="h-[300px] min-h-[30rem] w-full bg-cover rounded shadow-md"
                 style={{
-                  backgroundImage:
-                    `url(${listing.imgUrls[0]})`,
+                  backgroundImage: `url(${listing.imgUrls[0]})`,
                 }}
               ></div>
             </div>
             <div className="flex flex-col h-[300px] min-h-[30rem] overflow-hidden  rounded-md gap-2 md:w-2/5">
               <div
-                  className="h-[150px] min-h-[15rem] w-full bg-cover rounded shadow-md "
-                  style={{
-                    backgroundImage:
-                      `url(${listing.imgUrls[0]})`,
-                  }}
-                >
-                  
-                </div>
-                <div
-                  className="h-[150px] min-h-[15rem] w-full bg-cover rounded shadow-md"
-                  style={{
-                    backgroundImage:
-                      `url(${listing.imgUrls[0]})`,
-                  }}
-                >
-
-                </div>
+                className="h-[150px] min-h-[15rem] w-full bg-cover rounded shadow-md "
+                style={{
+                  backgroundImage: `url(${listing.imgUrls[0]})`,
+                }}
+              ></div>
+              <div
+                className="h-[150px] min-h-[15rem] w-full bg-cover rounded shadow-md"
+                style={{
+                  backgroundImage: `url(${listing.imgUrls[0]})`,
+                }}
+              ></div>
             </div>
           </div>
         </section>

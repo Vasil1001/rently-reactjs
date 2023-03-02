@@ -11,10 +11,12 @@ import { toast } from "react-toastify"
 import { IoChevronBackOutline } from "react-icons/io5"
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper"
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/swiper-bundle.css"
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/scrollbar"
 
 export default function Listing() {
   const [listing, setListing] = useState(null)
@@ -73,66 +75,49 @@ export default function Listing() {
             Back to listings
           </p>
         </span>
-
-        {/* // ? SWIPING  RESPONSIVE PHOTO GALLERY 3/3 GRID WITH 2/3 IMAGE ON LEFT */}
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-        navigation={true}
-        a11y={true}
-        style={{ height: '300px', minHeight: "30rem" }}
-        className="mb-5 "
-      >
-        {listing.imgUrls.map((url, index) => {
-          return (
-            <SwiperSlide key={index}>
-            <div
-                style={{
-                  background: `url(${listing.imgUrls[index]}) center no-repeat`,
-                  backgroundSize: 'cover',
-                  minHeight: '30rem',
-                }}
-                className=''
-              ></div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-
-        <section className="">
+        <section className="h-1/2">
           <div className="flex flex-wrap ">
-            <div className=" md:block md:w-3/5 pr-2 h-[300px] min-h-[30rem]">
+            <div className=" md:block md:w-3/5  pr-2 ">
               <div
-                className="h-[300px] min-h-[30rem] w-full bg-cover rounded shadow-md"
+                className="h-full w-full bg-cover rounded shadow-md"
                 style={{
                   backgroundImage:
-                    `url(${listing.imgUrls[0]})`,
+                    "url('https://source.unsplash.com/random/1280x720')",
                 }}
               ></div>
             </div>
-            <div className="flex flex-col h-[300px] min-h-[30rem] overflow-hidden  rounded-md gap-2 md:w-2/5">
-              <div
-                  className="h-[150px] min-h-[15rem] w-full bg-cover rounded shadow-md "
-                  style={{
-                    backgroundImage:
-                      `url(${listing.imgUrls[0]})`,
-                  }}
-                >
-                  
-                </div>
-                <div
-                  className="h-[150px] min-h-[15rem] w-full bg-cover rounded shadow-md"
-                  style={{
-                    backgroundImage:
-                      `url(${listing.imgUrls[0]})`,
-                  }}
-                >
-
-                </div>
+            <div className="md:w-2/5 h-50">
+              <div className="mb-2">
+                <img
+                  className="rounded bg-cover shadow-md h-1/2 "
+                  src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/victorian-ground-floor-flat-for-sale-rachel-khoo-former-home-ravensworthroad-dexters-exterior-1591631748.jpg?crop=0.668xw:1.00xh;0.195xw,0&resize=640:*"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="hidden md:block rounded bg-cover shadow-md h-1/2"
+                  src="https://source.unsplash.com/random/1280x720"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </section>
+      </div>
+
+      {/* // ? SWIPING  RESPONSIVE PHOTO GALLERY 3/3 GRID WITH 2/3 IMAGE ON LEFT */}
+      <div className="mx-auto ">
+        <Swiper slidesPerView={1} pagination={{ clickable: true }}>
+          {listings.imgUrls.map((img, index) => (
+           <SwiperSlide key={index}>
+<div></div>
+           </SwiperSlide>
+           ))}
+        
+
+        </Swiper>
+        
       </div>
 
       <div className="grid grid-cols-5 pt-1 ">

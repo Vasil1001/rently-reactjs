@@ -100,7 +100,7 @@ export default function Listing() {
         })}
       </Swiper>
 
-        <section className="">
+        <section className="h-full">
           <div className="flex flex-wrap ">
             <div className=" md:block md:w-3/5 pr-2 h-[300px] min-h-[30rem]">
               <div
