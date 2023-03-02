@@ -282,7 +282,31 @@ export default function Listing() {
       </div>
       <br />
       <br />
+      
+      <div className="grid grid-cols-5 xl:grid-cols-5 lg:grid-cols-5 md:grid-cols-5 mb-5 md:gap-5">
+        <div className="col-span-3 row-span-2 ">
+          <img
+            src="https://www.habituallychic.luxury/wp-content/uploads/2019/03/virginia-howard-london-flat-habituallychic-001-1024x683.jpg"
+            alt="Exterior1"
+            className="h-full w-full bg-cover"
+          />
+        </div>
+        <div className="col-span-2 row-span-2 ">
+          <div className="flex flex-col gap-2 items-center justify-center">
+            <img
+              src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/victorian-ground-floor-flat-for-sale-rachel-khoo-former-home-ravensworthroad-dexters-exterior-1591631748.jpg?crop=0.668xw:1.00xh;0.195xw,0&resize=640:*"
+              alt="a"
+              className="h-full w-full bg-cover"
+            />
 
+            <img
+              src="https://media.houseandgarden.co.uk/photos/61893aa251c95671034bb431/master/w_1600%2Cc_limit/171130_rui3123.jpg"
+              alt="a"
+              className="h-full w-full bg-cover"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

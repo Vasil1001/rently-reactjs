@@ -32,7 +32,7 @@ export default function Explore() {
 
       <Slider />
 
-      <h1 className="text-3xl font-bold mb-2 mt-5">Categories</h1>
+      <h1 className="text-3xl font-bold  mb-2 mt-5">Categories</h1>
       <div className="grid grid-cols-1  xl:grid-cols-3 auto-cols-max lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 mx-auto gap-5 ">
         <Link to="/category/rent">
           <img
