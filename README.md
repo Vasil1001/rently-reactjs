@@ -1,5 +1,5 @@
 # Rently - react.js
-A React + Vite + Firebase + Tailwind + DaisyUI app. _WORK IN PROGRESS_
+A React + Vite + Firebase + Tailwind + DaisyUI app. _FINISHED_
 
 Project 3 of the 'React Front to Back 2022' Udemy course, with my own twist in layout design and features. 
 
@@ -7,19 +7,45 @@ Link to app: [https://rently-marketplace.netlify.app/](https://rently-marketplac
 
 [![React][React.js]][React-url]
 
-Added so far:
+Features:
 - Tailwind CSS for layouts
 - Firebase Auth: Login, Register, Logout, Google Auth, Profile page
 - Firestore Database
-- Explore page with categories inside
-- Template categories for rent, sale, user posted listings, saved listings, user alerts, user filters
-- Basic listing component with property name, description - fetched from Firestore found in rent/sale category
+- Explore page with Sale or Rent categories 
+- Listings that when clicked open a listing page that contains a gallery slider and information fetched from Firestore
+- User profile page where listings can be created, with images, name and property information
+- User created listings can be deleted and edited only when same user is logged in
+- Contact landlord page that allows users to send email to person who posted
 
 <!-- app-screenshots -->
 ## App screenshots
 Explore Page 
 :-----------------------:
-![chrome_RdcZTtRQOC](https://user-images.githubusercontent.com/78150846/220147426-32f98961-251c-4697-9580-3426e1147c6e.png)
+![chrome_prN3NBJInn](https://user-images.githubusercontent.com/78150846/222471446-1b5909ee-5189-40f4-bdc1-4e3fcda5accb.png)
+
+Rent Category Page 
+:-----------------------:
+![chrome_gDH9XvFGzw](https://user-images.githubusercontent.com/78150846/222471515-234c0bf3-b977-4921-ad5c-91a6e014e6e4.png)
+
+Listing Page 
+:-----------------------:
+![chrome_CGWi5pEIUz](https://user-images.githubusercontent.com/78150846/222471638-c8cb9dd7-9b90-40eb-baa4-640994d02940.png)
+
+Listing Page 2
+:-----------------------:
+![chrome_WH4n3WoVYK](https://user-images.githubusercontent.com/78150846/222472588-48949983-dad8-4671-bf97-c2cc1f4e2c83.jpg)
+
+Profile Page 
+:-----------------------:
+![chrome_BvmoyCRO00](https://user-images.githubusercontent.com/78150846/222471912-9ceff4b4-24b7-4081-8f00-10bd5d58ebc5.png)
+
+Create/Edit listing Page 
+:-----------------------:
+![chrome_PXOuKwI9jK](https://user-images.githubusercontent.com/78150846/222472237-834caa02-451b-4a77-80f2-724a549e1914.png)
+
+Contact landlord Page 
+:-----------------------:
+![chrome_hUKAtpD6xf](https://user-images.githubusercontent.com/78150846/222472277-f7de1bed-638b-42bb-9e38-a375d77e0a5b.png)
 
 Register Page | Login View 
 :-----------------------:|:-----------------------:
@@ -28,11 +54,6 @@ Register Page | Login View
 Responsive Navigation Bar 
 :-----------------------:
 ![chrome_FBv1rN4Llo](https://user-images.githubusercontent.com/78150846/220147550-54b718f0-b855-4c2c-9b35-34b6ee90b59a.png)
-
-Profile Page 
-:-----------------------:
-![chrome_xlZESOHKoE](https://user-images.githubusercontent.com/78150846/220147607-4a9f5aca-aff2-44e2-8dfb-7039b90f0828.png)
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -60,11 +81,15 @@ Profile Page
 
 <!-- general-info -->
 ## General Info
-- 
+- A property renting platform where users can post their listings to sell or rent
+- Users can use it to browse available listings and get in contact with landlords
 
 ## Learning Outcomes
 - The target learning outcomes are:
-    - 
+    - Further expand React skills
+    - Learn to use Firebase firestore
+    - Practice with CRUD functionality with creating rent listings, deleting and editing them.
+
 <!-- setup -->
 ## Setup
   - This project was bootstrapped with [Vite]
