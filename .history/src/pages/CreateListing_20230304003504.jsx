@@ -216,7 +216,7 @@ export default function CreateListing() {
   }
 
   return (
-    <div className=" lg:w-12/12 md:w-12/12 m-auto mt-24 h-screen-vh rounded-lg bg-[#2d323b] p-6 xl:w-10/12">
+    <div className=" lg:w-12/12 md:w-12/12 m-auto mt-5 h-screen-vh flex flex-col rounded-lg bg-[#2d323b] p-6 xl:w-10/12">
       <p className="mb-5 text-xl">Create a new listing</p>
       <form onSubmit={onSubmit} className="flex flex-col">
         {/* // ? ROW FOR PROPERTY NAME */}
