@@ -81,17 +81,26 @@ export default function Listing() {
           pagination={{ clickable: true }}
           navigation={true}
           a11y={true}
-          style={{ height: "300px", minHeight: "30rem" }}
-          className="mb-5 "
+          style={{ minHeight: "38rem" }}
+          className=" object-cover mb-5"
         >
           {listing.imgUrls.map((url, index) => {
             return (
               <SwiperSlide key={index}>
+                {/* <div className=" overflow-hidden rounded-lg">
+                  <div className="relative col-span-full  min-h-[35rem]  w-full bg-slate-100 pb-5">
+                    <img
+                      className="absolute bottom-0 min-h-[35rem] w-full object-cover"
+                      src={`${listing.imgUrls[index]}`}
+                      alt="image"
+                    />
+                  </div>
+                </div> */}
                 <div
                   style={{
                     background: `url(${listing.imgUrls[index]}) center no-repeat`,
                     backgroundSize: "cover",
-                    minHeight: "30rem",
+                    minHeight: "38rem",
                   }}
                   className=""
                 ></div>
@@ -102,7 +111,7 @@ export default function Listing() {
 
         <section className="">
           <div className="flex flex-wrap ">
-            <div className=" h-[300px] min-h-[30rem] pr-2 md:block md:w-3/5">
+            <div className="h-[300px] min-h-[30rem] pr-2 md:block md:w-3/5">
               <div
                 className="h-[300px] min-h-[30rem] w-full rounded bg-cover shadow-md"
                 style={{
@@ -114,13 +123,13 @@ export default function Listing() {
               <div
                 className="h-[150px] min-h-[15rem] w-full rounded bg-cover shadow-md "
                 style={{
-                  backgroundImage: `url(${listing.imgUrls[0]})`,
+                  backgroundImage: `url(${listing.imgUrls[1]})`,
                 }}
               ></div>
               <div
                 className="h-[150px] min-h-[15rem] w-full rounded bg-cover shadow-md"
                 style={{
-                  backgroundImage: `url(${listing.imgUrls[0]})`,
+                  backgroundImage: `url(${listing.imgUrls[2]})`,
                 }}
               ></div>
             </div>
