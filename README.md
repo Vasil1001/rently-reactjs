@@ -37,7 +37,8 @@ Listing Page 2
 
 Profile Page 
 :-----------------------:
-![chrome_BvmoyCRO00](https://user-images.githubusercontent.com/78150846/222471912-9ceff4b4-24b7-4081-8f00-10bd5d58ebc5.png)
+![chrome_rHtJydxVg3](https://user-images.githubusercontent.com/78150846/222858367-ed9aa45e-c1bc-4b1c-9b17-5905eeb8ad9b.png)
+![chrome_NkblTRjTPc](https://user-images.githubusercontent.com/78150846/222858375-3134dc44-bad2-41df-949b-ead6bb7f2268.png)
 
 Create/Edit listing Page 
 :-----------------------:
