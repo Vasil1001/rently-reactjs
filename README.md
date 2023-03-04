@@ -25,15 +25,15 @@ Explore Page
 
 Rent Category Page 
 :-----------------------:
-![chrome_gDH9XvFGzw](https://user-images.githubusercontent.com/78150846/222471515-234c0bf3-b977-4921-ad5c-91a6e014e6e4.png)
+![chrome_PpVdJsxvOQ](https://user-images.githubusercontent.com/78150846/222858217-9a230342-de76-4e55-b2ec-c2b2c8c827a8.png)
 
 Listing Page 
 :-----------------------:
-![chrome_CGWi5pEIUz](https://user-images.githubusercontent.com/78150846/222471638-c8cb9dd7-9b90-40eb-baa4-640994d02940.png)
+![chrome_LiFhiXTPrM](https://user-images.githubusercontent.com/78150846/222858258-bb0d23dc-e101-417e-a036-c1d4c054cdf6.jpg)
 
 Listing Page 2
 :-----------------------:
-![chrome_WH4n3WoVYK](https://user-images.githubusercontent.com/78150846/222472588-48949983-dad8-4671-bf97-c2cc1f4e2c83.jpg)
+![chrome_Wc5eQQ3iOl](https://user-images.githubusercontent.com/78150846/222858291-704f66da-198b-4480-9904-f9dd8e162a4b.jpg)
 
 Profile Page 
 :-----------------------:
