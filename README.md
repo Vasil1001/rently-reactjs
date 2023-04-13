@@ -17,6 +17,19 @@ Features:
 - User created listings can be deleted and edited only when same user is logged in
 - Contact landlord page that allows users to send email to person who posted
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#app-screenshots">App Screenshots</a></li>
+    <li><a href="#general-info">General Info</a></li>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#project-status">Status</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
 <!-- app-screenshots -->
 ## App screenshots
 Explore Page 
@@ -64,19 +77,6 @@ Responsive Navigation Bar
     <li>TailwindCSS layouts</li>
     <li>DaisyUI library for components</li>
     <li>VSCode</li>
-  </ol>
-</details>
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#app-screenshots">App Screenshots</a></li>
-    <li><a href="#general-info">General Info</a></li>
-    <li><a href="#setup">Setup</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#project-status">Status</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
